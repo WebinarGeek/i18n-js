@@ -26,7 +26,7 @@ module I18n
             assets_pipeline_available &&
             Rails.application.config.assets.enabled != false
 
-          assets_pipeline_available && (rails4? || rails5? || rails6? || rails7? || rails3_assets_enabled)
+          assets_pipeline_available && (rails4? || rails5? || rails6? || rails7? || rails8? || rails3_assets_enabled)
         end
 
         private
@@ -49,6 +49,10 @@ module I18n
         
         def rails7?
           rails? && Rails.version.to_i == 7
+        end
+
+        def rails8?
+          rails? && Rails.version.to_i == 8
         end
 
         def safe_gem_check(*args)
