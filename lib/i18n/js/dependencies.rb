@@ -18,7 +18,7 @@ module I18n
         # Call this in an initializer
         def using_asset_pipeline?
           assets_pipeline_available =
-            (rails3? || rails4? || rails5? || rails6? || rails7?) &&
+            (rails3? || rails4? || rails5? || rails6? || rails7? || rails8?) &&
             Rails.respond_to?(:application) &&
             Rails.application.config.respond_to?(:assets)
           rails3_assets_enabled =
